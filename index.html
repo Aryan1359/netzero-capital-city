@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Net‑Zero Capital City · Quests</title>
+<link rel="stylesheet" href="assets/css/style.css" />
+<meta name="description" content="Slide‑sized quest tabs for Quest 1–3 with UC Berkeley‑inspired design." />
+</head>
+<body>
+<div class="backdrop" aria-hidden="true">
+<div class="blob b1"></div>
+<div class="blob b2"></div>
+<div class="blob b3"></div>
+</div>
+
+
+<header class="top">
+<div class="brand">Engineering a Net‑Zero Carbon Future</div>
+<div class="tag">Capital City · Multi‑Quest</div>
+<button id="btnShot" class="shot" title="Toggle Screenshot Mode">Screenshot Mode</button>
+</header>
+
+
+<!-- Top Quest Nav -->
+<nav id="questNav" class="quest-nav" role="tablist" aria-label="Quest Navigation"></nav>
+
+
+<!-- Second‑level Tabs (per quest) -->
+<nav id="tabNav" class="tab-nav" role="tablist" aria-label="Quest Tabs"></nav>
+
+
+<!-- Stage with fixed slide frame (1280×720) that auto‑scales to viewport -->
+<main class="stage">
+<div class="slide-frame">
+<section id="slide" class="slide" role="tabpanel" aria-live="polite">
+<div class="pad">
+<h1>Loading…</h1>
+<p>If you see this for long, check file paths under <code>/quests/&lt;quest&gt;/&lt;tab&gt;.html</code>.</p>
+</div>
+</section>
+</div>
+</main>
+
+
+<footer>
+<div>
+Student; <strong>Aryan Yaghobi</strong> · Course: <em>Engineering a Net‑Zero Carbon Future</em>
+· <span id="footQuest">Quest</span> · <span id="footTitle"></span>
+</div>
+<div class="version" id="ver">v0.2.0</div>
+</footer>
+
+
+<script defer src="assets/js/app.js"></script>
+</body>
+</html>
