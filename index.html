@@ -9,49 +9,68 @@
 </head>
 <body>
 <div class="backdrop" aria-hidden="true">
-<div class="blob b1"></div>
-<div class="blob b2"></div>
-<div class="blob b3"></div>
+	<div class="blob b1"></div>
+	<div class="blob b2"></div>
+	<div class="blob b3"></div>
 </div>
 
-
-<header class="top">
-<div class="brand">Engineering a Net‑Zero Carbon Future</div>
-<div class="tag">Capital City · Multi‑Quest</div>
-<button id="btnShot" class="shot" title="Toggle Screenshot Mode">Screenshot Mode</button>
+<!-- Header with brand, hamburger, top nav, and screenshot toggle -->
+<header class="top" role="banner">
+	<div class="left">
+		<div class="brand">Engineering a Net‑Zero Carbon Future</div>
+		<div class="tag">Capital City · Multi‑Quest</div>
+	</div>
+	<div class="right">
+		<button id="btnMenu" class="hamburger" aria-label="Toggle menu" aria-controls="topNav" aria-expanded="false">
+			<span class="bar"></span><span class="bar"></span><span class="bar"></span>
+		</button>
+		<nav id="topNav" class="top-nav" role="navigation" aria-label="Quests"></nav>
+			<button id="btnPrint" class="action" title="Print current quest">Print</button>
+			<button id="btnExportPpt" class="action" title="Export current quest to PowerPoint">Export PPTX</button>
+		<button id="btnShot" class="shot" title="Toggle Screenshot Mode">Screenshot Mode</button>
+	</div>
+	<div class="mobile-drawer" id="mobileDrawer" aria-hidden="true"></div>
 </header>
 
+<!-- Hero section -->
+<section id="hero" class="hero" role="region" aria-label="Overview">
+	<div class="container">
+		<h1>Net‑Zero Capital City</h1>
+		<p>Explore three quests to decarbonize energy systems. Navigate tabs to compare feasibility, benefits, and challenges — then capture high‑contrast slides for presentations.</p>
+	</div>
+	</section>
 
-<!-- Top Quest Nav -->
-<nav id="questNav" class="quest-nav" role="tablist" aria-label="Quest Navigation"></nav>
+<!-- Secondary tab pills -->
+<nav id="tabNav" class="tab-nav pills" role="tablist" aria-label="Quest Tabs"></nav>
 
-
-<!-- Second‑level Tabs (per quest) -->
-<nav id="tabNav" class="tab-nav" role="tablist" aria-label="Quest Tabs"></nav>
-
-
-<!-- Stage with fixed slide frame (1280×720) that auto‑scales to viewport -->
-<main class="stage">
-<div class="slide-frame">
-<section id="slide" class="slide" role="tabpanel" aria-live="polite">
-<div class="pad">
-<h1>Loading…</h1>
-<p>If you see this for long, check file paths under <code>/quests/&lt;quest&gt;/&lt;tab&gt;.html</code>.</p>
-</div>
-</section>
-</div>
+<!-- Main content area; inside a capture frame used for Screenshot Mode -->
+<main class="main">
+	<div class="container">
+		<div class="capture-frame">
+			<section id="slide" class="content" role="tabpanel" aria-live="polite">
+				<div class="pad">
+					<h2>Loading…</h2>
+					<p>If you see this for long, check file paths under <code>/quests/&lt;quest&gt;/&lt;tab&gt;.html</code>.</p>
+				</div>
+			</section>
+		</div>
+	</div>
 </main>
 
 
-<footer>
+<footer role="contentinfo">
 <div>
 Student; <strong>Aryan Yaghobi</strong> · Course: <em>Engineering a Net‑Zero Carbon Future</em>
 · <span id="footQuest">Quest</span> · <span id="footTitle"></span>
 </div>
-<div class="version" id="ver">v0.2.0</div>
+<div class="version" id="ver">v1.0.0</div>
 </footer>
 
+<!-- Exit button visible only in Screenshot Mode -->
+<button id="btnExitShot" class="exit-shot" aria-hidden="true" title="Exit Screenshot Mode">Exit Screenshot</button>
 
+<!-- Optional PPTX library (client-side) -->
+<script defer src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
 <script defer src="assets/js/app.js"></script>
 </body>
 </html>
